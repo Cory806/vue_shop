@@ -12,10 +12,16 @@ import {
 
 
 
-    MessageBox, Pagination, Row, Submenu,
+    MessageBox,
+
+
+    Option, Pagination, Row,
+
+
+    Select, Submenu,
     Switch, Table,
     TableColumn,
-    Tooltip
+    Tag, Tooltip, Tree
 } from 'element-ui'
 import Vue from 'vue'
 
@@ -42,7 +48,10 @@ Vue.use(Switch)
 Vue.use(Tooltip)
 Vue.use(Pagination)
 Vue.use(Dialog)
-
+Vue.use(Tag)
+Vue.use(Tree)
+Vue.use(Option)
+Vue.use(Select)
 //全局挂载在Vue原型链上，访问$message，则有弹窗提示
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
