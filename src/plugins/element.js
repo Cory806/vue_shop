@@ -1,5 +1,5 @@
 import {
-    Aside,
+    Alert, Aside,
     Breadcrumb,
     BreadcrumbItem, Button,
     Card,
@@ -21,7 +21,7 @@ import {
 
 
 
-    cascader, Col, Container,
+    Cascader, Col, Container,
     Dialog, Form, FormItem,
     Header, Input, Main,
     Menu,
@@ -37,8 +37,15 @@ import {
 
 
     Select, Submenu,
-    Switch, Table,
+    Switch,
+
+    Table,
     TableColumn,
+
+
+
+    TabPane, Tabs,
+
     Tag, Tooltip, Tree
 } from 'element-ui'
 import Vue from 'vue'
@@ -70,7 +77,10 @@ Vue.use(Tag)
 Vue.use(Option)
 Vue.use(Select)
 Vue.use(Tree)
-Vue.use(cascader)
+Vue.use(Cascader)
+Vue.use(Alert)
+Vue.use(Tabs)
+Vue.use(TabPane)
 
 //全局挂载在Vue原型链上，访问$message，则有弹窗提示
 Vue.prototype.$message = Message

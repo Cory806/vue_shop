@@ -115,8 +115,8 @@ export default {
                                     this.rolelist = res.data.data
                                 })
                         },
-                                    async removeTag(role,rightId){
-                            const confirmResult = await this.$confirm(
+                      async removeTag(role,rightId){
+                         const confirmResult = await this.$confirm(
                         '此操作将永久删除该用户, 是否继续?',
                         '提示',
                         {
@@ -141,7 +141,7 @@ export default {
                         //  console.log(res)
                 })
              },
-
+                    //展示分配权限对话框
                     showRight(role){
                          this.roleid = role.id 
                         this.$http.get('rights/tree').then(res=>{

@@ -350,6 +350,7 @@
             }).catch(err =>{})
             
               },
+              // 展示分配角色的对话框
               setRole(userInfo){
                 this.userInfo = userInfo
               this.$http.get('roles').then(res=>{
@@ -366,15 +367,17 @@
                   if(!this.selectedRoleId){
                   return this.$message.error('请选择角色')
                   }
-                this.$http.put(`users/${this.userInfo.id}/role`,{
-                  rid:this.selectedRoleId}).then(res=>{
-       
+                this.$http.put(`users/${this.userInfo.id}/role`,
+                {
+                  rid: this.selectedRoleId
+                  }).then
+                  (res=>{
                      if(res.data.meta.status !==200)
                     return this.$message.error('分配失败')
                     this.$message.success('分配成功')    
                      this.getUserList()
                       this.allotRoleVisible = false
-                      console.log(this.selectedRoleId)
+                      console.log(res.data)
                   })  
               },
              
