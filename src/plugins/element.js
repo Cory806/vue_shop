@@ -21,7 +21,97 @@ import {
 
 
 
-    Cascader, Col, Container,
+    Cascader,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Checkbox, CheckboxGroup, Col, Container,
     Dialog, Form, FormItem,
     Header, Input, Main,
     Menu,
@@ -36,7 +126,27 @@ import {
     Option, Pagination, Row,
 
 
-    Select, Submenu,
+    Select,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Step, Steps, Submenu,
     Switch,
 
     Table,
@@ -46,7 +156,7 @@ import {
 
     TabPane, Tabs,
 
-    Tag, Tooltip, Tree
+    Tag, Tooltip, Tree, Upload
 } from 'element-ui'
 import Vue from 'vue'
 
@@ -81,6 +191,13 @@ Vue.use(Cascader)
 Vue.use(Alert)
 Vue.use(Tabs)
 Vue.use(TabPane)
+Vue.use(Steps)
+Vue.use(Step)
+Vue.use(CheckboxGroup)
+Vue.use(Checkbox)
+Vue.use(Upload)
+
+
 
 //全局挂载在Vue原型链上，访问$message，则有弹窗提示
 Vue.prototype.$message = Message
