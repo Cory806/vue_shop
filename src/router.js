@@ -6,6 +6,7 @@ import list from './components/goods/list.vue'
 import params from './components/goods/params.vue'
 import home from './components/home.vue'
 import login from './components/login.vue'
+import order from './components/order/order.vue'
 import rights from './components/power/rights.vue'
 import roles from './components/power/roles.vue'
 import user from './components/user/user.vue'
@@ -28,7 +29,8 @@ const routes = [
           { path: '/categories', component: cate },
           { path: '/params', component: params },
           { path: '/goods', component: list },
-          { path: '/goods/add', component: add }
+          { path: '/goods/add', component: add },
+          { path: '/orders', component: order }
          ]
         }
 
