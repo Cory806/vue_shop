@@ -9,6 +9,7 @@ import login from './components/login.vue'
 import order from './components/order/order.vue'
 import rights from './components/power/rights.vue'
 import roles from './components/power/roles.vue'
+import report from './components/report/report.vue'
 import user from './components/user/user.vue'
 import welcome from './components/welcome.vue'
 Vue.use(VueRouter)
@@ -30,7 +31,8 @@ const routes = [
           { path: '/params', component: params },
           { path: '/goods', component: list },
           { path: '/goods/add', component: add },
-          { path: '/orders', component: order }
+          { path: '/orders', component: order },
+          { path: '/reports', component: report }
          ]
         }
 
