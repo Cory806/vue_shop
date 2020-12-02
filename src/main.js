@@ -1,5 +1,11 @@
 import axios from 'axios'
+import 'quill/dist/quill.bubble.css'
+// require styles 导入富文本编辑器对应的样式
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
 import Vue from 'vue'
+// 导入富文本编辑器
+import VueQuillEditor from 'vue-quill-editor'
 import TreeTable from 'vue-table-with-tree-grid'
 import App from './App.vue'
 import './assets/css/global.css'
@@ -7,7 +13,6 @@ import './assets/css/global.css'
 import './assets/fonts/iconfont.css'
 import './plugins/element.js'
 import router from './router'
-
 
 // 配置请求的跟路径
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
@@ -20,6 +25,8 @@ return config;
 Vue.prototype.$http = axios
 Vue.config.productionTip = false
 Vue.component('tree-table', TreeTable)
+// 将富文本编辑器，注册为全局可用的组件
+Vue.use(VueQuillEditor)
 // 过滤器，时间格式的转化，originVal需要处理的时间，月默认从0开始，所以+1，padStart(2, '0')，第一个参数总行多少位，2参数代表如不足两位，则以0填充
 Vue.filter('dateFormat', function(originVal) {
   const dt = new Date(originVal)
